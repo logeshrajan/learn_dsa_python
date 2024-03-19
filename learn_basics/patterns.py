@@ -134,9 +134,49 @@ def binary_triangle(n):
         else:
             start = 1
         for col in range(row):
-           print(start, end='')
+           print(start, end=' ')
            start = 1-start
         print() 
 
 binary_triangle(5)
 
+# Pattern – 12: Number Crown Pattern
+def pattern12(n ):
+    spaces = 2*(n-1)
+    for row in range(1,n+1):
+        for num in range(1,row+1): # to print number in each row before space
+            print(num, end=' ')
+        for space in range(spaces): # to print spaces
+            print(' ', end='')
+        for num in range(row,0,-1): # to print number in each row after space
+            print(num, end=' ')
+        print()
+        spaces-=2
+pattern12(4)
+
+# Pattern – 13: Increasing Number Triangle Pattern
+def pattern13(n ):
+    num = 1
+    for row in range(1, n+1):
+        for col in range(1,row+1):
+            print(num, end=' ')
+            num+=1
+        print()
+        
+pattern13(4)
+
+# Pattern-14: Increasing Letter Triangle Pattern
+
+def pattern14(n):
+    for row in range(1, n + 1):  # Outer loop for rows
+        for ind in range(1, row + 1):  # Inner loop for each row
+            print(chr(64 + ind), end=" ")  # Print the character corresponding to the ASCII value
+        print()  # Move to the next line after each row
+
+# Pattern-15: Reverse Letter Triangle Pattern
+
+def pattern15(n):
+    for row in range(n, 0,-1):
+        for ind in range(1, row + 1):  # Inner loop for each row
+            print(chr(64 + ind), end=" ")  # Print the character corresponding to the ASCII value
+        print()

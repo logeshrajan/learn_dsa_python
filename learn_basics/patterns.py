@@ -166,7 +166,6 @@ def pattern13(n ):
 pattern13(4)
 
 # Pattern-14: Increasing Letter Triangle Pattern
-
 def pattern14(n):
     for row in range(1, n + 1):  # Outer loop for rows
         for ind in range(1, row + 1):  # Inner loop for each row
@@ -174,9 +173,122 @@ def pattern14(n):
         print()  # Move to the next line after each row
 
 # Pattern-15: Reverse Letter Triangle Pattern
-
 def pattern15(n):
     for row in range(n, 0,-1):
         for ind in range(1, row + 1):  # Inner loop for each row
             print(chr(64 + ind), end=" ")  # Print the character corresponding to the ASCII value
         print()
+        
+# Pattern – 16: Alpha-Ramp Pattern
+def pattern16(n):
+    for row in range(1,n+1):
+        for ind in range(1, row + 1):
+            print(chr(64 + row), end=" ")
+        print()
+        
+pattern16(4)
+
+# Pattern – 17: Alpha-Hill Pattern
+def pattern17(n):
+    for i in range(n):
+        print(" " * (n - i - 1), end="")
+        for j in range(i + 1):
+            print(chr(65 + j), end=" ")
+        print(" " * (n - i - 1), end="")
+        for j in range(i - 1, -1, -1):
+            print(chr(65 + j), end=" ")
+        print()
+        
+# Pattern-18: Alpha-Triangle Pattern
+def pattern18(n):
+    for row in range(1,n+1):
+        for col in range(row):
+            print(chr(64+n-col), end=' ')
+        print()
+
+pattern18(3)
+
+# Pattern-19: Symmetric-Void Pattern
+def pattern19(n):
+    space = 0
+    for row in range(n):
+        for st in range(n-row):
+            print('*', end='')
+        for sp in range(0,space):
+            print(' ', end='')
+        for st in range(n-row):
+            print('*', end='')
+        space+=2
+        print()
+    space = (2*n)-2
+    for row in range(n):
+        for st in range(row+1):
+            print('*', end='')
+        for sp in range(0,space):
+            print(' ', end='')
+        for st in range(row+1):
+            print('*', end='')
+        space-=2
+        print()
+pattern19(5)
+
+# Pattern – 20: Symmetric-Butterfly Pattern
+
+def pattern20():
+    space = (2*n)-2
+    for row in range(n):
+        for st in range(row+1):
+            print('*', end=' ')
+        for sp in range(0,space):
+            print(' ', end=' ')
+        for st in range(row+1):
+            print('*', end=' ')
+        space-=2
+        print()
+    space = 2
+    for row in range(1,n):
+        for st in range(n-row):
+            print('*', end=' ')
+        for sp in range(0,space):
+            print(' ', end=' ')
+        for st in range(n-row):
+            print('*', end=' ')
+        space+=2
+        print()
+
+# Pattern – 21: Hollow Rectangle Pattern
+def pattern21(n):
+    for row in range(n):
+        for col in range(n):
+            if row ==0 or col ==0 or row == n-1 or col == n-1:
+                print('*', end='')
+            else:
+                print(' ', end='')
+        print()
+                
+pattern21(4)
+
+# Pattern – 22: The Number Pattern
+def pattern22(n):
+    for i in range(2 * n - 1):
+        for j in range(2 * n - 1):
+            top = i
+            bottom = j
+            right = (2 * n - 2) - j
+            left = (2 * n - 2) - i
+            print(n - min(min(top, bottom), min(left, right)), end=" ")
+        print()
+                
+pattern22(3)
+
+
+
+
+
+
+
+
+
+
+
+

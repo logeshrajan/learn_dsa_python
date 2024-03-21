@@ -1,5 +1,5 @@
 # Count digits in a number
-# T O(nlog10n)  S O(1)
+# T O(log n)  S O(1)
 def count_digits(n): 
    count=0
    x=n
@@ -15,7 +15,7 @@ def count_digits(n):
       return len(str(n))
 print("Number of digits in ",n," is ",count_digits(n)) 
 
-# T O(nlog10n)  S O(1)
+# T O(log n)  S O(1)
 # Problem Statement: Given a number N reverse the number and print it.
 def reverse_number(n):
     reverse = 0
@@ -28,7 +28,7 @@ def reverse_number(n):
 print(reverse_number(123))
 
 # Polindrome
-# T O(nlog10n)  S O(1)
+# T O(log n)  S O(1)
 def reverse_number(n):
     reverse = 0
     old_n = n
@@ -43,4 +43,5 @@ if reverse_number(n)==n:
     print(f"{n} is Palindrome")
 else:
     print(f"{n} is not Palindrome")
+
 

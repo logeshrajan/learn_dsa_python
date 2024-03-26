@@ -27,3 +27,20 @@ nums = [10,5,10,15,10,5]
 queries = [10,5,15,100,0,32]
 
 find_number_of_times(nums, queries)
+
+from collections import defaultdict
+def find_highest_lowest_freq(l):
+    d = defaultdict(int)
+    for val in l:
+        d[val]+=1
+    high, low = 1, 1
+    for k,v in d.items():
+        if v > high:
+            high = k
+        elif v<=low:
+            low = k
+    return high, low
+
+l = [10,5,10,15,10,5]
+print(find_highest_lowest_freq(l))
+

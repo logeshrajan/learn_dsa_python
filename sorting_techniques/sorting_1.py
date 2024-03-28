@@ -17,7 +17,7 @@ x = [7, 5, 9, 2, 8]
 print('Before sorting',x)
 print('After sorting',selection_sort(x))
 
-# Bubble Sort Algorithm
+# Bubble Sort Algorithm TC O(N^2)
 # take the highest element and place it in right most corner and repeat the same for each iteration
 def bubble_sort(arr):
     n = len(arr)
@@ -40,7 +40,7 @@ x = [2,13, 4, 1, 3, 6, 28]
 print('Before sorting',x)
 print('After sorting',bubble_sort(x))
 
-# Insertion Sort Algorithm
+# Insertion Sort Algorithm TC O(N^2)
 # Take an element and place it in correct position
 def insertion_sort(arr):
     n = len(arr)

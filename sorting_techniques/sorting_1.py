@@ -1,6 +1,7 @@
 # Selection Sort Algorithm
 # get the minimum in range and swap it to left index. then increment the left index by 1.
-TC O(N^2) SC O(1)
+# Time complexity: O(N2), (where N = size of the array), for the  worst and O(N) for the best case
+# Space Complexity: O(1)
 def selection_sort(arr):
     for l in range(len(arr)-1):
         min_val = l
@@ -17,8 +18,10 @@ x = [7, 5, 9, 2, 8]
 print('Before sorting',x)
 print('After sorting',selection_sort(x))
 
-# Bubble Sort Algorithm TC O(N^2)
+# Bubble Sort Algorithm 
 # take the highest element and place it in right most corner and repeat the same for each iteration
+# Time Complexity: O(N2) for the worst and average cases and O(N) for the best case. Here, N = size of the array.
+# Space Complexity: O(1)
 def bubble_sort(arr):
     n = len(arr)
     # Traverse through all elements in the array

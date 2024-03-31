@@ -1,6 +1,6 @@
 # Selection Sort Algorithm
 # get the minimum in range and swap it to left index. then increment the left index by 1.
-# Time complexity: O(N2), (where N = size of the array), for the  worst and O(N) for the best case
+# Time complexity: O(N2), (where N = size of the array), for the  worst and best and avg cases
 # Space Complexity: O(1)
 def selection_sort(arr):
     for l in range(len(arr)-1):

@@ -48,8 +48,9 @@ merge_sort(arr)
 print('After sorting',arr)
 
 # Recursive Bubble Sort Algorithm
-TC worst = O(n^2) Best = O(n)  S O(n)
-
+# Time Complexity: O(N2) for the worst and average cases and O(N) for the best case. Here, N = size of the array.
+# Space Complexity: O(N) auxiliary stack space.
+    
 def recursive_bubble_sort(arr, n):
     if n ==1:
         return
@@ -65,6 +66,25 @@ def recursive_bubble_sort(arr, n):
 x = [2,13, 4, 1, 3, 6, 28]
 print('Before sorting',x)
 print('After sorting',recursive_bubble_sort(x, len(x)))
+
+# Recursive Insertion Sort Algorithm
+# Time Complexity: O(N2), (where N = size of the array), for the worst, and average cases.
+# Space Complexity: O(N) auxiliary stack space.
+
+def recursive_insertion_sort(arr, i, n):
+    if i == n:
+        return
+    r = i
+    while r>0 and arr[r-1]>arr[r]:
+        arr[r-1], arr[r] = arr[r], arr[r-1] 
+        r-=1
+    print(arr)
+    recursive_insertion_sort(arr, i+1, n)
+    
+x = [30,2,13, 4, 1, 3, 6, 28]
+print('Before sorting',x)
+recursive_insertion_sort(x,0, len(x))
+print('After sorting',x)
 
 
 

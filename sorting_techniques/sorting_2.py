@@ -86,6 +86,30 @@ print('Before sorting',x)
 recursive_insertion_sort(x,0, len(x))
 print('After sorting',x)
 
-
+# Quick Sort
+# TC O(nlogn) SC O(N)
+def partition(arr, low, high):
+    pivot = arr[low] # you can pick any element as pivot
+    i, j = low, high
+    while i < j:
+        while  arr[i] <= pivot and i <= high-1:
+            i+=1
+        while  arr[j] > pivot and j >= low:
+            j-=1
+        if i < j:
+            arr[i], arr[j] = arr[j], arr[i]
+    # Swapping partitoin after crossing i and j
+    arr[low], arr[j] = arr[j], arr[low]
+    return j
+def quick_sort(arr, low, high):
+    if low < high:
+        partition_index = partition(arr, low, high)
+        quick_sort(arr, low, partition_index-1)
+        quick_sort(arr, partition_index+1, high)
+    
+x = [30,2,13, 4, 1, 3, 6, 28]
+print('Before sorting',x)
+quick_sort(x,0, len(x)-1)
+print('After sorting',x)
 
 

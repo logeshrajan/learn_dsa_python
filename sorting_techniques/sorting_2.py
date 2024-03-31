@@ -47,4 +47,25 @@ print('Before sorting',arr)
 merge_sort(arr)
 print('After sorting',arr)
 
+# Recursive Bubble Sort Algorithm
+TC worst = O(n^2) Best = O(n)  S O(n)
+
+def recursive_bubble_sort(arr, n):
+    if n ==1:
+        return
+    swapped = False
+    for i in range(0, n-1):
+        if arr[i] > arr[i+1]:
+            arr[i], arr[i+1] = arr[i+1], arr[i]
+            swapped = True
+    print(arr)
+    if not swapped:
+        return
+    recursive_bubble_sort(arr, n-1)
+x = [2,13, 4, 1, 3, 6, 28]
+print('Before sorting',x)
+print('After sorting',recursive_bubble_sort(x, len(x)))
+
+
+
 
